@@ -93,7 +93,7 @@ d. O terminal exibirá (Exemplo de saída):
 
 ```bash
 Encriptado: wOTPytzi  # string Base64 legível
-Decriptado: BATATA    # texto original
+Decriptado: Rubens    # texto original
 ```
 
 ## 5. Considerações finais
