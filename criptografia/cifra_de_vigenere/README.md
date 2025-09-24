@@ -23,9 +23,9 @@ project/
 ```
 
 * `cipher/encrypt.py` → função `encrypt(plaintext, key)`
-* `cipher/decrypt.py` → função `decrypt(ciphertext, key)`
+* `cipher/decrypt.py` → função `decrypt(ciphertext_b64, key)`
 * `main.py` → interface para o usuário
-* `testes.txt` → plano de testes com 5 casos em português
+* `testes.txt` → plano de testes com 6 casos em português
 
 
 ## 3. Desenvolvimento
@@ -51,11 +51,11 @@ project/
 
 * Solicita ao usuário que digite a chave utilizada na cifra.
 
-* Chama a função encrypt(text, key) para gerar a string encriptada em Base64.
+* Chama a função `encrypt(plaintext, key)` para gerar a string encriptada em Base64.
 
 * Exibe no terminal o texto encriptado, garantindo que seja legível.
 
-* Chama a função decrypt(encrypted, key) para recuperar o texto original.
+* Chama a função `decrypt(ciphertext_b64, key)` para recuperar o texto original.
 
 * Exibe no terminal o texto decriptado, confirmando que a encriptação e decriptação funcionaram corretamente.
 
@@ -84,20 +84,21 @@ python main.py
 c. Insira o **texto** e a **chave** quando solicitado
 
 ```bash
-Digite o seu texto: BATATA
-Digite a sua chave: CHAVE
+Digite o seu texto: Rubens
+Digite a sua chave: nome
 ```
 
 
 d. O terminal exibirá (Exemplo de saída):
 
 ```bash
-Encriptado: hYmVl5mE  # string Base64 legível
+Encriptado: wOTPytzi  # string Base64 legível
 Decriptado: BATATA    # texto original
 ```
 
 ## 5. Considerações finais
 
+* A implementação da cifra de Vigenère utilizando toda a tabela ASCII (0–255) mostrou-se eficiente para encriptação e decriptação de textos.
 * O uso de Base64 garante **saída legível** mesmo com caracteres não imprimíveis do ASCII.
 * O algoritmo preserva acentos, símbolos e caracteres especiais.
 * O plano de testes garante confiabilidade, contemplando casos simples e extremos.
