@@ -6,7 +6,7 @@ def main():
     key = input("Digite a sua chave: ")
 
     encrypted = encrypt(text, key)
-    print("Encriptado:", encrypted)
+    print("\nEncriptado:", encrypted)
 
     decrypted = decrypt(encrypted, key)
     print("Decriptado:", decrypted)
