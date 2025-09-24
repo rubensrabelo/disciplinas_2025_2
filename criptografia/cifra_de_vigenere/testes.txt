@@ -4,19 +4,23 @@ Plano de Testes – Cifra de Vigenère (ASCII 0–255)
    Entrada: "BaTaTA Doce"
    Chave: "chAve"
 
-2. Caso chave maior que o texto
+2. Caso com texto longo – texto e chave longas
+   Entrada: "A vitalidade é demonstrada não apenas pela persistência, mas pela capacidade de começar de novo."
+   Chave: "tstando qualqr chave aqui"
+
+3. Caso chave maior que o texto
    Entrada: "feijão"
    Chave: "testando uma chave maior"
 
-3. Caso com caracteres especiais
+4. Caso com caracteres especiais
    Entrada: "Ol@, Mundo! Tudo bem com você$?"
    Chave: "senha"
 
-4. Caso com caracteres ASCII altos
+5. Caso com caracteres ASCII altos
    Entrada: "Ruben$R@beloÇÕÁéüÿ"
    Chave: "uf¢"
 
-5. Caso texto vazio
+6. Caso texto vazio
    Entrada: ""
    Chave: "qualquer"
    Saída esperada após decriptar: ""

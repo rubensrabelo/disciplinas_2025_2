@@ -65,6 +65,7 @@ project/
 
 * O arquivo testes.txt contém cinco casos para validar a cifra de Vigenère
     * a. Caso simples;
+    * a. Caso com texto longo;
     * b. Chave maior que o texto;
     * c. Com caracteres especiais;
     * d. Caso com caracteres ASCII altos;
