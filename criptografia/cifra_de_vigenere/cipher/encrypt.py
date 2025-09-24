@@ -15,7 +15,5 @@ def encrypt(plaintext: str, key: str) -> str:
         encrypted_value = (text_value + key_value) % 256
         result.append(encrypted_value)
 
-    # transform list of ints into bytes
     encrypted_bytes = bytes(result)
-    # encode as Base64 string
     return base64.b64encode(encrypted_bytes).decode()
