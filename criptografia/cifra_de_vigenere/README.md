@@ -5,10 +5,12 @@
 Este trabalho implementa a **cifra de Vigenère** usando toda a tabela ASCII (0–255) para encriptação e decriptação.
 A saída encriptada é sempre uma **string legível** (Base64), permitindo visualização direta no terminal.
 
+Para mais detalhes, consulte o [relatório completo](./docs/relatorio_da_codificacao_da_cifra.pdf).
+
 
 ## 2. Estrutura do projeto
 
-```
+```bash
 project/
 │
 ├── cipher/
@@ -57,7 +59,7 @@ project/
 
 * Exibe no terminal o texto decriptado, confirmando que a encriptação e decriptação funcionaram corretamente.
 
-* A função main() é protegida pelo bloco if ```__name__``` == ```"__main__"```:, garantindo que o código seja executado apenas quando o script for rodado diretamente, e não quando importado como módulo.
+* A função main() é protegida pelo bloco if `__name__` == `"__main__"`:, garantindo que o código seja executado apenas quando o script for rodado diretamente, e não quando importado como módulo.
 
 ### 3.4. Plano de Testes Resumido
 
