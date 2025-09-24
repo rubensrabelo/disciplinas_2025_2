@@ -1,0 +1,26 @@
+Plano de Testes – Cifra de Vigenère (ASCII 0–255)
+
+1. Caso simples – texto e chave curtos
+   Entrada: "BATATA"
+   Chave: "CHAVE"
+   Saída esperada após decriptar: "BATATA"
+
+2. Caso chave maior que o texto
+   Entrada: "OI"
+   Chave: "SEGREDO"
+   Saída esperada após decriptar: "OI"
+
+3. Caso com caracteres especiais
+   Entrada: "Olá, Mundo! 123 @#"
+   Chave: "senha"
+   Saída esperada após decriptar: "Olá, Mundo! 123 @#"
+
+4. Caso com caracteres ASCII altos
+   Entrada: "ÇÕÁéüÿ"
+   Chave: "criptografia"
+   Saída esperada após decriptar: "ÇÕÁéüÿ"
+
+5. Caso texto vazio
+   Entrada: ""
+   Chave: "qualquer"
+   Saída esperada após decriptar: ""
