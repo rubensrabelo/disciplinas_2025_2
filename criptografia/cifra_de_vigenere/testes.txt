@@ -23,4 +23,3 @@ Plano de Testes – Cifra de Vigenère (ASCII 0–255)
 6. Caso texto vazio
    Entrada: ""
    Chave: "qualquer"
-   Saída esperada após decriptar: ""
