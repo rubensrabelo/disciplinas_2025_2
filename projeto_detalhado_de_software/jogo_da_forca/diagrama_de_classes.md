@@ -14,19 +14,29 @@
     a. Jogador
 
 2. **Entidades:**
-    a. User:
-        * firstName: str
-    b. Game:
-        * startGame() -> None
-    b. WordSorter
-        * theme: str
-        * sortWord() -> str
-    c. Answer
-        * answerCorrect: str
-        * rightLetters: list[str]
-        * wrongLetters: list[str]
-        * checkLetter(letter: str) -> None
-        * checkAnswer(answer: str) -> bool
+    
+    a. **User:**
+    * firstName: str
+    
+    b. **GameScreen:**
+    * display() -> None
+    
+    b. **Game:**
+    * startGame(number: int) -> None
+    
+    c. **Match:**
+    * startMatch() -> MatchSchema
+    
+    d. **WordSorter:**
+    * theme: str
+    * sortWord() -> str
+    
+    e. **Answer:**
+    * answerCorrect: WordSchema
+    * rightLetters: list[str]
+    * wrongLetters: list[str]
+    * checkLetter(letter: str) -> None
+    * checkAnswer(answer: str) -> bool
 
 
 ## Diagrama de Classes
@@ -38,24 +48,34 @@ classDiagram
     firstName: str
   }
 
+  class GameScreen {
+    + display(number: int) None
+  }
+
   class Game {
-    + startGame(): None
+    + startGame(number: int) None
+  }
+
+  class Match {
+    + startMatch() MatchSchema
   }
 
   class WordSorter {
     - theme: str
-    + sortWord(): str
+    + sortWord() str
   }
 
   class Answer {
-    - answerCorrect: str
+    - answerCorrect: WordSchema
     - rightLetters: list[str]
     - wrongLetters: list[str]
-    + checkLetter(letter: str) -> bool
-    + checkAnswer(answer: str) -> bool
+    + checkLetter(letter: str) bool
+    + checkAnswer(answer: str) bool
   }
   
   User "1" -- "*" Game
-  Game "*" -- "*" Answer
-  Answer "*" -- "*" WordSorter
+  GameScreen "1" -- "*" Game
+  Game "1" -- "*" Match
+  Match "1" -- "*" Answer
+  Answer "1" -- "1" WordSorter
 ```
